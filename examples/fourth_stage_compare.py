@@ -57,9 +57,9 @@ class Compare:
 				format(self.city2.city))
 
 
-a = Collect_data("gym", "Monaco")
-a.get_name()
-b = Collect_data("gym", "New York City")
-b.get_name()
-c = Compare(a, b)
-print(c.compare_two())
+# a = Collect_data("gym", "Monaco")
+# a.get_name()
+# b = Collect_data("gym", "New York City")
+# b.get_name()
+# c = Compare(a, b)
+# print(c.compare_two())
