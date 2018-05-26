@@ -63,4 +63,4 @@ def create_dct(name, loc):
 		for k in loc:
 			d[i] = k
 	return d
-print(create_dct(get_name(main()), get_loc(get_dct(main()))))
+# print(create_dct(get_name(main()), get_loc(get_dct(main()))))
