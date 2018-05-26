@@ -8,4 +8,4 @@ The discribtion of all the documents in that repository is written here
 
 # How to run the program
 - Install the modules written in requirements.txt
-- Run app (more detailed instruction how to run the program is the video named "How to?")
+- Run app (more detailed instruction how to run the program is the video named "How to")
