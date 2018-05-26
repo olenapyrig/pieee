@@ -24,4 +24,3 @@ def main(place, city):
 	user = client.venues.search(
 		params={'near': city, 'query': place})
 	return user
-main("edxf","sdf")
