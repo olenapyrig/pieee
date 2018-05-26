@@ -41,3 +41,7 @@ class Collect_data:
 
 	def __repr__(self):
 		return "Names:{}:\nCoordinates:{}".format(self.name, self.cities)
+	
+# a = Collect_data("gym", "Monaco")
+# a.get_name()
+# print(a)
