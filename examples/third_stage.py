@@ -12,18 +12,12 @@ def main():
 	auth_uri = client.oauth.auth_url()
 	print('Please open in browser:', auth_uri)
 	resp_code = input('Please enter response code:')
-	#
-	# auth_uri = "https://foursquare.com/oauth2/authenticate?client_id=YYNPFYBPCW4D2WDD0CJA0IPG5BWQVZYVVRKUOX1N3HUHK3Y2&response_type=code&redirect_uri=http%3A%2F%2Flocalhost"
-	# resp_code = "3BO2G4JBAVVHZYMGY3MSMN0QV512H0X24SCXEDSHJXJ3UP3P"
 
 	# Interrogate foursquare's servers to get the user's access_token
-
 	access_token = client.oauth.get_token(resp_code)
-
 	# Apply the returned access token to the client
 	client.set_access_token(access_token)
 	# user = client.users()
-	# print(user)
 	user = client.venues.search(
 		params={'near': 'New York City', 'query': 'gym', 'limit': '5'})
 	return user
