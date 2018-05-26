@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS = false; L_NO_TOUCH = false; L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawgit.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <style> #map_9386ca6ea4814e759297fe60c797f5ef {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js"></script>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9386ca6ea4814e759297fe60c797f5ef" ></div>
+        
+</body>
+<script>    
+    
+
+            
+                var bounds = null;
+            
+
+            var map_9386ca6ea4814e759297fe60c797f5ef = L.map(
+                                  'map_9386ca6ea4814e759297fe60c797f5ef',
+                                  {center: [0,0],
+                                  zoom: 1,
+                                  maxBounds: bounds,
+                                  layers: [],
+                                  worldCopyJump: false,
+                                  crs: L.CRS.EPSG3857
+                                 });
+            
+        
+    
+            var tile_layer_e9552a7a3f194d7cb6d4a3d812a3ebf2 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(map_9386ca6ea4814e759297fe60c797f5ef);
+        
+    
+            var feature_group_7db80216b0c6412891c7b718895f4d36 = L.featureGroup(
+                ).addTo(map_9386ca6ea4814e759297fe60c797f5ef);
+        
+    
+
+            var marker_821786c7d149412089048db18c5c24f2 = L.marker(
+                [40.742593,-74.000588],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_3dc8301b76ad432db1516bc15d35f6cd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_821786c7d149412089048db18c5c24f2.setIcon(icon_3dc8301b76ad432db1516bc15d35f6cd);
+            
+    
+            var popup_da9c72b9bbd649b6bd4dc521f1b3b8cd = L.popup({maxWidth: '300'});
+
+            
+                var html_d0d0eff7316f4914933753fbf5ea9dc7 = $('<div id="html_d0d0eff7316f4914933753fbf5ea9dc7" style="width: 100.0%; height: 100.0%;">GYM Sportsbar</div>')[0];
+                popup_da9c72b9bbd649b6bd4dc521f1b3b8cd.setContent(html_d0d0eff7316f4914933753fbf5ea9dc7);
+            
+
+            marker_821786c7d149412089048db18c5c24f2.bindPopup(popup_da9c72b9bbd649b6bd4dc521f1b3b8cd);
+
+            
+        
+    
+            var heat_map_1f00f23f8fc1421cb1495a1f697bc7f1 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_673afb10459d481489a2d6ce5b438913 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_cf069b75d03a41e481561ee3324a62a4 = L.marker(
+                [40.75810868499696,-73.9917226956553],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_2fd0d27c49b44fd19fd99e1808650eae = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cf069b75d03a41e481561ee3324a62a4.setIcon(icon_2fd0d27c49b44fd19fd99e1808650eae);
+            
+    
+            var popup_e3c5ba2c70c1434fa5796ccbd35b0eea = L.popup({maxWidth: '300'});
+
+            
+                var html_f2a931cbc6044c5d8c74dcfe6c544ebd = $('<div id="html_f2a931cbc6044c5d8c74dcfe6c544ebd" style="width: 100.0%; height: 100.0%;">Mid-City Gym & Tanning</div>')[0];
+                popup_e3c5ba2c70c1434fa5796ccbd35b0eea.setContent(html_f2a931cbc6044c5d8c74dcfe6c544ebd);
+            
+
+            marker_cf069b75d03a41e481561ee3324a62a4.bindPopup(popup_e3c5ba2c70c1434fa5796ccbd35b0eea);
+
+            
+        
+    
+            var heat_map_4fd809afb54a425b90ae570d40ed5f6e = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_8454b948b8184f9a9e8de692e784e8f5 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_dd0561b4c58d4dc38dfd64b03ce62779 = L.marker(
+                [40.74756385176932,-73.99583810530017],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_5fada52af5714a13ba1594c471cd724a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_dd0561b4c58d4dc38dfd64b03ce62779.setIcon(icon_5fada52af5714a13ba1594c471cd724a);
+            
+    
+            var popup_84a73fe6c5694e6da66c89a09acac101 = L.popup({maxWidth: '300'});
+
+            
+                var html_b4cc0b47665f433a8a8b06d2c3e4c6fc = $('<div id="html_b4cc0b47665f433a8a8b06d2c3e4c6fc" style="width: 100.0%; height: 100.0%;">FIT Gym</div>')[0];
+                popup_84a73fe6c5694e6da66c89a09acac101.setContent(html_b4cc0b47665f433a8a8b06d2c3e4c6fc);
+            
+
+            marker_dd0561b4c58d4dc38dfd64b03ce62779.bindPopup(popup_84a73fe6c5694e6da66c89a09acac101);
+
+            
+        
+    
+            var heat_map_3ca4b83da38a4646b3165bc98e86c827 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_b2022f28db794f98afa48b5deb8881c2 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_78b14cd43a9f459f9f55697cff424b59 = L.marker(
+                [40.74899270407195,-74.00525681858359],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_8c68a192013842f3890a792c0cd51a6a = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_78b14cd43a9f459f9f55697cff424b59.setIcon(icon_8c68a192013842f3890a792c0cd51a6a);
+            
+    
+            var popup_e4bebd389f8a4be19d574b2e10873d23 = L.popup({maxWidth: '300'});
+
+            
+                var html_5d5412d584754d3cada35d5af8bdb361 = $('<div id="html_5d5412d584754d3cada35d5af8bdb361" style="width: 100.0%; height: 100.0%;">Gym @ Tate</div>')[0];
+                popup_e4bebd389f8a4be19d574b2e10873d23.setContent(html_5d5412d584754d3cada35d5af8bdb361);
+            
+
+            marker_78b14cd43a9f459f9f55697cff424b59.bindPopup(popup_e4bebd389f8a4be19d574b2e10873d23);
+
+            
+        
+    
+            var heat_map_cc769a0f87324f279e8d260b3ab57cf6 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_6b702a6f12464972aa2c30f2e7d58329 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_8ba7f5151a1e4d9ab573461594cda02a = L.marker(
+                [40.74585894426403,-73.98823633435742],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_3655ae0b45334bcb932cc66b07f43859 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8ba7f5151a1e4d9ab573461594cda02a.setIcon(icon_3655ae0b45334bcb932cc66b07f43859);
+            
+    
+            var popup_d04eb2cfc6b0474ebd602dab06667f89 = L.popup({maxWidth: '300'});
+
+            
+                var html_c6b604f5c8b4410a919e9fe3d4e13cec = $('<div id="html_c6b604f5c8b4410a919e9fe3d4e13cec" style="width: 100.0%; height: 100.0%;">The Gym at Ace Hotel New York</div>')[0];
+                popup_d04eb2cfc6b0474ebd602dab06667f89.setContent(html_c6b604f5c8b4410a919e9fe3d4e13cec);
+            
+
+            marker_8ba7f5151a1e4d9ab573461594cda02a.bindPopup(popup_d04eb2cfc6b0474ebd602dab06667f89);
+
+            
+        
+    
+            var heat_map_52a2ac0bec71493193d1fd2861ee7d2c = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_944ffd593201434ead14bee10cf430f7 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_4070ee0afd604ce2ad1e90f544154c35 = L.marker(
+                [40.74809912152061,-74.00343461289998],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_c2903a429eb445a39dae272919a5b564 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_4070ee0afd604ce2ad1e90f544154c35.setIcon(icon_c2903a429eb445a39dae272919a5b564);
+            
+    
+            var popup_7676af21f2444db08dcdc3643188dc45 = L.popup({maxWidth: '300'});
+
+            
+                var html_0f5c79d0803c4248800a236b526dbbdb = $('<div id="html_0f5c79d0803c4248800a236b526dbbdb" style="width: 100.0%; height: 100.0%;">Gym at London Terrace Gardens</div>')[0];
+                popup_7676af21f2444db08dcdc3643188dc45.setContent(html_0f5c79d0803c4248800a236b526dbbdb);
+            
+
+            marker_4070ee0afd604ce2ad1e90f544154c35.bindPopup(popup_7676af21f2444db08dcdc3643188dc45);
+
+            
+        
+    
+            var heat_map_9696b8a007ab4814a9bbc44d7e1caae5 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_08abfe04d0ec4804b6f63d71c58b1c02 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_83ee0c4a8a3e4948a9d34fe13f2141b5 = L.marker(
+                [40.74822371538265,-73.97024191430063],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_1f0386a655594c639cf6da5c3df5fa93 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_83ee0c4a8a3e4948a9d34fe13f2141b5.setIcon(icon_1f0386a655594c639cf6da5c3df5fa93);
+            
+    
+            var popup_f8dd7629941a43aa997b732a15a89a24 = L.popup({maxWidth: '300'});
+
+            
+                var html_56402243a5094fa2aa2d83cbce41829c = $('<div id="html_56402243a5094fa2aa2d83cbce41829c" style="width: 100.0%; height: 100.0%;">Tudor City Place Gym</div>')[0];
+                popup_f8dd7629941a43aa997b732a15a89a24.setContent(html_56402243a5094fa2aa2d83cbce41829c);
+            
+
+            marker_83ee0c4a8a3e4948a9d34fe13f2141b5.bindPopup(popup_f8dd7629941a43aa997b732a15a89a24);
+
+            
+        
+    
+            var heat_map_63389a59b7814c32be81ddafb64e4db5 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_8d445296dc9e41d9afcec6220b501619 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_abb0e25f303646af95b17258e259dc23 = L.marker(
+                [40.74467102227094,-73.98872764725327],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_f94259fe8b8b4abdb7b72fddb89f7211 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_abb0e25f303646af95b17258e259dc23.setIcon(icon_f94259fe8b8b4abdb7b72fddb89f7211);
+            
+    
+            var popup_64e2d0c9b78645cda23c6c15303b8e41 = L.popup({maxWidth: '300'});
+
+            
+                var html_5384978fc60a4fb983cf46b694bdd8f5 = $('<div id="html_5384978fc60a4fb983cf46b694bdd8f5" style="width: 100.0%; height: 100.0%;">The Gym at the Nomad Hotel</div>')[0];
+                popup_64e2d0c9b78645cda23c6c15303b8e41.setContent(html_5384978fc60a4fb983cf46b694bdd8f5);
+            
+
+            marker_abb0e25f303646af95b17258e259dc23.bindPopup(popup_64e2d0c9b78645cda23c6c15303b8e41);
+
+            
+        
+    
+            var heat_map_9449086049a04edf9b6cb834f50c478e = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_f5b0c2af4fda4945a097a94fce124d4d = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_e39f8512f336460ab4df08dc6fa93a97 = L.marker(
+                [40.742341,-73.991473],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_2605a7bd410e450cbd19389b6c6f3214 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e39f8512f336460ab4df08dc6fa93a97.setIcon(icon_2605a7bd410e450cbd19389b6c6f3214);
+            
+    
+            var popup_3715f9e719b34445bf7fe861bce5d1f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_5b7576b71ced4e49b265920e25f3ad9a = $('<div id="html_5b7576b71ced4e49b265920e25f3ad9a" style="width: 100.0%; height: 100.0%;">F.I.T. Gym</div>')[0];
+                popup_3715f9e719b34445bf7fe861bce5d1f3.setContent(html_5b7576b71ced4e49b265920e25f3ad9a);
+            
+
+            marker_e39f8512f336460ab4df08dc6fa93a97.bindPopup(popup_3715f9e719b34445bf7fe861bce5d1f3);
+
+            
+        
+    
+            var heat_map_d26e601b2ab94f7685b4ab17f9abbff5 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_2a12ad0d6b61481caf99ef12ddc7d646 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_789c1457a8a84f1d8fff45fd5e2f991b = L.marker(
+                [40.74318583428775,-73.99431158852991],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_759adb3e23fd4206a289bb812d2e42fd = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_789c1457a8a84f1d8fff45fd5e2f991b.setIcon(icon_759adb3e23fd4206a289bb812d2e42fd);
+            
+    
+            var popup_9270f282aa904887a27677cf1e958591 = L.popup({maxWidth: '300'});
+
+            
+                var html_24d316a6cf1648ac9624fb93023e1551 = $('<div id="html_24d316a6cf1648ac9624fb93023e1551" style="width: 100.0%; height: 100.0%;">133 W 22nd Gym</div>')[0];
+                popup_9270f282aa904887a27677cf1e958591.setContent(html_24d316a6cf1648ac9624fb93023e1551);
+            
+
+            marker_789c1457a8a84f1d8fff45fd5e2f991b.bindPopup(popup_9270f282aa904887a27677cf1e958591);
+
+            
+        
+    
+            var heat_map_387146d4a62a469f9f2652c3240a6a41 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_1130e76213f44e26adc2402e34a3d55b = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_1b420df5d38b437f805f16df2c829f79 = L.marker(
+                [40.742846422479744,-73.99012221307656],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_6983f9297fd0497faca9d76bb4bcb421 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1b420df5d38b437f805f16df2c829f79.setIcon(icon_6983f9297fd0497faca9d76bb4bcb421);
+            
+    
+            var popup_48b112aa55fe44e29f30aef08b35b254 = L.popup({maxWidth: '300'});
+
+            
+                var html_56e8be856d4a4aa7b418745e1ba48340 = $('<div id="html_56e8be856d4a4aa7b418745e1ba48340" style="width: 100.0%; height: 100.0%;">The Stanford Gym</div>')[0];
+                popup_48b112aa55fe44e29f30aef08b35b254.setContent(html_56e8be856d4a4aa7b418745e1ba48340);
+            
+
+            marker_1b420df5d38b437f805f16df2c829f79.bindPopup(popup_48b112aa55fe44e29f30aef08b35b254);
+
+            
+        
+    
+            var heat_map_f71690d5c8f84671b7ccfd340faa5232 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_194065ae54d8499b9d6c838e8fe82a5e = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_1c6f6e45ddda4a8aac12b160b96b7ffa = L.marker(
+                [40.75830294905915,-73.9922776051261],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_3684dc1fc0dd45abb1a3ddcfc25f2182 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_1c6f6e45ddda4a8aac12b160b96b7ffa.setIcon(icon_3684dc1fc0dd45abb1a3ddcfc25f2182);
+            
+    
+            var popup_a25baad1b0c84403ab09626bdb95fed9 = L.popup({maxWidth: '300'});
+
+            
+                var html_f00f2952a1cd41f1a74e1a559333ac2e = $('<div id="html_f00f2952a1cd41f1a74e1a559333ac2e" style="width: 100.0%; height: 100.0%;">360 West 43rd Street Gym</div>')[0];
+                popup_a25baad1b0c84403ab09626bdb95fed9.setContent(html_f00f2952a1cd41f1a74e1a559333ac2e);
+            
+
+            marker_1c6f6e45ddda4a8aac12b160b96b7ffa.bindPopup(popup_a25baad1b0c84403ab09626bdb95fed9);
+
+            
+        
+    
+            var heat_map_14c0e97f00ba48aabf0bfb2380d8ac64 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_c759ac5bbba64795af3870f11b0b284e = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_37fba349e9b34d5b9a0d86e0fe4239c8 = L.marker(
+                [40.738631,-73.985854],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_8281b60c757549e0ab5b3bf1b5e19ec5 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_37fba349e9b34d5b9a0d86e0fe4239c8.setIcon(icon_8281b60c757549e0ab5b3bf1b5e19ec5);
+            
+    
+            var popup_8f942767e9b94c8987a5e3daaef3aa4e = L.popup({maxWidth: '300'});
+
+            
+                var html_4f5183c971f943219d567f756078b749 = $('<div id="html_4f5183c971f943219d567f756078b749" style="width: 100.0%; height: 100.0%;">Aerospa Gym @ Gramercy Park Hotel</div>')[0];
+                popup_8f942767e9b94c8987a5e3daaef3aa4e.setContent(html_4f5183c971f943219d567f756078b749);
+            
+
+            marker_37fba349e9b34d5b9a0d86e0fe4239c8.bindPopup(popup_8f942767e9b94c8987a5e3daaef3aa4e);
+
+            
+        
+    
+            var heat_map_5f3efe6acdba4dd8872e0f02e3f2c016 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_959c2f49505143959135846d7e78c647 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_6be2d3d4bee04b7bbca36d403c8cb7c9 = L.marker(
+                [40.7554661743803,-73.99534070848941],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_89b407ab264949ed84f26dbdab264daa = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6be2d3d4bee04b7bbca36d403c8cb7c9.setIcon(icon_89b407ab264949ed84f26dbdab264daa);
+            
+    
+            var popup_fb98dcba6ebc47068244fbed5a223fd7 = L.popup({maxWidth: '300'});
+
+            
+                var html_ab17abdb36c64cabba5c647cf7989006 = $('<div id="html_ab17abdb36c64cabba5c647cf7989006" style="width: 100.0%; height: 100.0%;">Hudson Crossing Gym</div>')[0];
+                popup_fb98dcba6ebc47068244fbed5a223fd7.setContent(html_ab17abdb36c64cabba5c647cf7989006);
+            
+
+            marker_6be2d3d4bee04b7bbca36d403c8cb7c9.bindPopup(popup_fb98dcba6ebc47068244fbed5a223fd7);
+
+            
+        
+    
+            var heat_map_b84269287539489e9513cf070247d147 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_d34ab380cfe14a348262bfcf18c03b25 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_e016ea7073114b96812a4b8da2b608cc = L.marker(
+                [40.74172460307028,-73.99470532021245],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_ef938b8c458942a9bf8e94151df5c537 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_e016ea7073114b96812a4b8da2b608cc.setIcon(icon_ef938b8c458942a9bf8e94151df5c537);
+            
+    
+            var popup_1931f9d64b6b4cac8e5b90b808c8b6d2 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e3fce8da081470cacde0bda1d4144ec = $('<div id="html_9e3fce8da081470cacde0bda1d4144ec" style="width: 100.0%; height: 100.0%;">21 Chelsea Gym</div>')[0];
+                popup_1931f9d64b6b4cac8e5b90b808c8b6d2.setContent(html_9e3fce8da081470cacde0bda1d4144ec);
+            
+
+            marker_e016ea7073114b96812a4b8da2b608cc.bindPopup(popup_1931f9d64b6b4cac8e5b90b808c8b6d2);
+
+            
+        
+    
+            var heat_map_1d58e6484b944dc9bf9c0323f2334048 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_fca29699d81c40d1a1be9e601892e4f4 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_21d6e06833e84c57b2ec7166780ef463 = L.marker(
+                [40.74712961598228,-73.98998555273887],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_763310da891547c3a31b0feeb50af3b3 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_21d6e06833e84c57b2ec7166780ef463.setIcon(icon_763310da891547c3a31b0feeb50af3b3);
+            
+    
+            var popup_3457499e7e094b56b65a71c73ae32d7f = L.popup({maxWidth: '300'});
+
+            
+                var html_6a65cf4292374dbb8b349485b03a6b08 = $('<div id="html_6a65cf4292374dbb8b349485b03a6b08" style="width: 100.0%; height: 100.0%;">The Beatrice Gym</div>')[0];
+                popup_3457499e7e094b56b65a71c73ae32d7f.setContent(html_6a65cf4292374dbb8b349485b03a6b08);
+            
+
+            marker_21d6e06833e84c57b2ec7166780ef463.bindPopup(popup_3457499e7e094b56b65a71c73ae32d7f);
+
+            
+        
+    
+            var heat_map_2f39ce2f38714860bff4db25fdef7ce0 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_6bfbed3011c54a50bdd8c823a5fbc041 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_9501e32ec03447a799ce856b60343632 = L.marker(
+                [40.74546240496286,-73.99093956093942],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_1ae8d1bc909540dabe36f4d48554bea1 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9501e32ec03447a799ce856b60343632.setIcon(icon_1ae8d1bc909540dabe36f4d48554bea1);
+            
+    
+            var popup_66f4831ba711471cbf3d4f9e958162f3 = L.popup({maxWidth: '300'});
+
+            
+                var html_f4d43a8efa804ca8a4fab427302b22ad = $('<div id="html_f4d43a8efa804ca8a4fab427302b22ad" style="width: 100.0%; height: 100.0%;">Chelsea Capitol Gym</div>')[0];
+                popup_66f4831ba711471cbf3d4f9e958162f3.setContent(html_f4d43a8efa804ca8a4fab427302b22ad);
+            
+
+            marker_9501e32ec03447a799ce856b60343632.bindPopup(popup_66f4831ba711471cbf3d4f9e958162f3);
+
+            
+        
+    
+            var heat_map_3eb5b67b9b4a40228f4d30481d342820 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_b28c6b9f553d47a0ba7585d005c634d5 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_25968fb698e648f99c3ade217a816b74 = L.marker(
+                [40.7493516228633,-74.0058570045859],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_a689cc2f8cf148f19772ee11808ec2ba = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_25968fb698e648f99c3ade217a816b74.setIcon(icon_a689cc2f8cf148f19772ee11808ec2ba);
+            
+    
+            var popup_043c3fe0a08d4819b81123b43d95f8be = L.popup({maxWidth: '300'});
+
+            
+                var html_80eca1bb311446a8b6f2854f25f7031d = $('<div id="html_80eca1bb311446a8b6f2854f25f7031d" style="width: 100.0%; height: 100.0%;">555 W 23rd St Gym</div>')[0];
+                popup_043c3fe0a08d4819b81123b43d95f8be.setContent(html_80eca1bb311446a8b6f2854f25f7031d);
+            
+
+            marker_25968fb698e648f99c3ade217a816b74.bindPopup(popup_043c3fe0a08d4819b81123b43d95f8be);
+
+            
+        
+    
+            var heat_map_7ebd84f76383415197b38fbc97e42493 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_07484848ede143618b78fa224ce6476b = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_0e914a94b0bd43b186c3396b2e607ccf = L.marker(
+                [40.743251486492184,-73.95974617103303],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_5465c9e5538149a094760ce8684ecf84 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_0e914a94b0bd43b186c3396b2e607ccf.setIcon(icon_5465c9e5538149a094760ce8684ecf84);
+            
+    
+            var popup_9045463369994032827d42c42b681caa = L.popup({maxWidth: '300'});
+
+            
+                var html_a3ccb4c523e0414e8122e0f347b7b90c = $('<div id="html_a3ccb4c523e0414e8122e0f347b7b90c" style="width: 100.0%; height: 100.0%;">HPS Commons Gym</div>')[0];
+                popup_9045463369994032827d42c42b681caa.setContent(html_a3ccb4c523e0414e8122e0f347b7b90c);
+            
+
+            marker_0e914a94b0bd43b186c3396b2e607ccf.bindPopup(popup_9045463369994032827d42c42b681caa);
+
+            
+        
+    
+            var heat_map_52f632a5c46744db9b67546c755fad1a = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_a6f3aff7a6b948a4b05813e9a7ffde4c = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_2a4a079986894d06ad776bac899823b4 = L.marker(
+                [40.705125057929344,-74.00781159711502],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_0b35b4afec364bf7aac3d1e3a85bdfb7 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2a4a079986894d06ad776bac899823b4.setIcon(icon_0b35b4afec364bf7aac3d1e3a85bdfb7);
+            
+    
+            var popup_38d42d9df31c4f41b367531d7bd10a37 = L.popup({maxWidth: '300'});
+
+            
+                var html_e375d8dd1b82415f9beb043deb904c47 = $('<div id="html_e375d8dd1b82415f9beb043deb904c47" style="width: 100.0%; height: 100.0%;">Andaz Wall Street Gym</div>')[0];
+                popup_38d42d9df31c4f41b367531d7bd10a37.setContent(html_e375d8dd1b82415f9beb043deb904c47);
+            
+
+            marker_2a4a079986894d06ad776bac899823b4.bindPopup(popup_38d42d9df31c4f41b367531d7bd10a37);
+
+            
+        
+    
+            var heat_map_4223a900e6c94928a557f62ba70ba161 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_88c9688ec18f4bd4bfa42547c67f7647 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_d83244e869834945a00cd17fd4ff22c6 = L.marker(
+                [40.733085847401185,-73.98702899795815],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_502caa4c852544a1b8b9b15cc9bbb9ec = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_d83244e869834945a00cd17fd4ff22c6.setIcon(icon_502caa4c852544a1b8b9b15cc9bbb9ec);
+            
+    
+            var popup_30d7e135095a4335a1b22d105a7b59ec = L.popup({maxWidth: '300'});
+
+            
+                var html_c183139c7a03495db6a5818f2f13a5ff = $('<div id="html_c183139c7a03495db6a5818f2f13a5ff" style="width: 100.0%; height: 100.0%;">123 Third Avenue Gym</div>')[0];
+                popup_30d7e135095a4335a1b22d105a7b59ec.setContent(html_c183139c7a03495db6a5818f2f13a5ff);
+            
+
+            marker_d83244e869834945a00cd17fd4ff22c6.bindPopup(popup_30d7e135095a4335a1b22d105a7b59ec);
+
+            
+        
+    
+            var heat_map_04ea5fcc3b494a9ca8197d5b18b7cb59 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_0f697f522f524291af31c822ee9d3f6e = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_cebf346896924523909dfae56da39906 = L.marker(
+                [40.751910352973866,-73.9858935506665],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_1cbae405f8ab426f8d13b54382abb974 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_cebf346896924523909dfae56da39906.setIcon(icon_1cbae405f8ab426f8d13b54382abb974);
+            
+    
+            var popup_2b9561b6879e4eb6bd8220b63b04c68d = L.popup({maxWidth: '300'});
+
+            
+                var html_bd50d76e4db04b7c94745f56c7955f22 = $('<div id="html_bd50d76e4db04b7c94745f56c7955f22" style="width: 100.0%; height: 100.0%;">The Gym at The Atlas</div>')[0];
+                popup_2b9561b6879e4eb6bd8220b63b04c68d.setContent(html_bd50d76e4db04b7c94745f56c7955f22);
+            
+
+            marker_cebf346896924523909dfae56da39906.bindPopup(popup_2b9561b6879e4eb6bd8220b63b04c68d);
+
+            
+        
+    
+            var heat_map_9ed59ecee1ef46f6a852678757861a7a = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_f8ce507dff64470a96d2fa7e2c0df108 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_3a8e9ae3314d4b52953561f5be19ef83 = L.marker(
+                [40.74086544126383,-74.00816364540064],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_989f85176a374989a3457fda89fb6dd8 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_3a8e9ae3314d4b52953561f5be19ef83.setIcon(icon_989f85176a374989a3457fda89fb6dd8);
+            
+    
+            var popup_f282fb629d4b4fe39bcb345c155ef549 = L.popup({maxWidth: '300'});
+
+            
+                var html_63f134077c394f3cadcca798fbf57790 = $('<div id="html_63f134077c394f3cadcca798fbf57790" style="width: 100.0%; height: 100.0%;">Gym at The Standard, New York - 17th Floor</div>')[0];
+                popup_f282fb629d4b4fe39bcb345c155ef549.setContent(html_63f134077c394f3cadcca798fbf57790);
+            
+
+            marker_3a8e9ae3314d4b52953561f5be19ef83.bindPopup(popup_f282fb629d4b4fe39bcb345c155ef549);
+
+            
+        
+    
+            var heat_map_946c6d690bf14329aa4aaa1f87bc983a = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_a7445ae5341f4a249d0235f8b5d9c1e3 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_974f6753cf474d4fa0b78d1e43f49d4e = L.marker(
+                [40.71065538319971,-74.00570922556336],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_ffd590012fe54747b767dea1a8c67525 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_974f6753cf474d4fa0b78d1e43f49d4e.setIcon(icon_ffd590012fe54747b767dea1a8c67525);
+            
+    
+            var popup_a41eda02d96941f1a78a460552b80793 = L.popup({maxWidth: '300'});
+
+            
+                var html_15a37b3fde474bd48fc3b9646d81e51e = $('<div id="html_15a37b3fde474bd48fc3b9646d81e51e" style="width: 100.0%; height: 100.0%;">New York by Gehry Gym</div>')[0];
+                popup_a41eda02d96941f1a78a460552b80793.setContent(html_15a37b3fde474bd48fc3b9646d81e51e);
+            
+
+            marker_974f6753cf474d4fa0b78d1e43f49d4e.bindPopup(popup_a41eda02d96941f1a78a460552b80793);
+
+            
+        
+    
+            var heat_map_6fac79c5c7cc4da98f67551b4bf80e9e = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_d57047971e9d40378edf647a8bc79976 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_31a5017c6d314833ad7f5db3dfc90304 = L.marker(
+                [40.741558,-73.999079],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_c61124d3a9734b60b4f9f380e81c9cd0 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_31a5017c6d314833ad7f5db3dfc90304.setIcon(icon_c61124d3a9734b60b4f9f380e81c9cd0);
+            
+    
+            var popup_178725f8ea9f4cb3920b01f73b9d5ffd = L.popup({maxWidth: '300'});
+
+            
+                var html_e1e3113879144c409450e2bca19c9de1 = $('<div id="html_e1e3113879144c409450e2bca19c9de1" style="width: 100.0%; height: 100.0%;">224 W 18th St Gym</div>')[0];
+                popup_178725f8ea9f4cb3920b01f73b9d5ffd.setContent(html_e1e3113879144c409450e2bca19c9de1);
+            
+
+            marker_31a5017c6d314833ad7f5db3dfc90304.bindPopup(popup_178725f8ea9f4cb3920b01f73b9d5ffd);
+
+            
+        
+    
+            var heat_map_48ef0df947da40c7a62fe705e4e8d42a = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_1543fa9af58c4adcae6bb0989fc5ad63 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_befd4e563ea949b09649604a2feaeed7 = L.marker(
+                [40.72066955247745,-74.00828507585904],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_5993a503248341a9b404545ab2ac58ed = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_befd4e563ea949b09649604a2feaeed7.setIcon(icon_5993a503248341a9b404545ab2ac58ed);
+            
+    
+            var popup_a21b6d053d7c41618285cdaa2c586e12 = L.popup({maxWidth: '300'});
+
+            
+                var html_9b12bbe905444fdcbba76b58d265f296 = $('<div id="html_9b12bbe905444fdcbba76b58d265f296" style="width: 100.0%; height: 100.0%;">The Little Gym of Tribeca</div>')[0];
+                popup_a21b6d053d7c41618285cdaa2c586e12.setContent(html_9b12bbe905444fdcbba76b58d265f296);
+            
+
+            marker_befd4e563ea949b09649604a2feaeed7.bindPopup(popup_a21b6d053d7c41618285cdaa2c586e12);
+
+            
+        
+    
+            var heat_map_de419b49803342968c666e3ed7075bdd = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_78ee5f6010254400bd441f04f750129b = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_ba8524b8a1cb4319ae7975deaee2ebee = L.marker(
+                [40.75727530635666,-73.99779701418834],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_1b7b4a50a3f748508b89dcac610395e2 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_ba8524b8a1cb4319ae7975deaee2ebee.setIcon(icon_1b7b4a50a3f748508b89dcac610395e2);
+            
+    
+            var popup_4e80478606d741c4bf3bcbee68f218dc = L.popup({maxWidth: '300'});
+
+            
+                var html_06d30ccc4eec4c8abcecd33337505471 = $('<div id="html_06d30ccc4eec4c8abcecd33337505471" style="width: 100.0%; height: 100.0%;">505W37 Gym</div>')[0];
+                popup_4e80478606d741c4bf3bcbee68f218dc.setContent(html_06d30ccc4eec4c8abcecd33337505471);
+            
+
+            marker_ba8524b8a1cb4319ae7975deaee2ebee.bindPopup(popup_4e80478606d741c4bf3bcbee68f218dc);
+
+            
+        
+    
+            var heat_map_7b901ea2da584f07a7983c6ee3b3825c = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_0a7255abee1e44e08246989bb5481d06 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_8e50ce3917c44837a2752419cd984f69 = L.marker(
+                [40.71236,-74.009429],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_eab847b7958d47bca7ab2127a5c16012 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_8e50ce3917c44837a2752419cd984f69.setIcon(icon_eab847b7958d47bca7ab2127a5c16012);
+            
+    
+            var popup_3153b8d41da243a6a501a6d79e303b3d = L.popup({maxWidth: '300'});
+
+            
+                var html_d9ad87598f5b4199b99f32d1f37643b9 = $('<div id="html_d9ad87598f5b4199b99f32d1f37643b9" style="width: 100.0%; height: 100.0%;">Gym @ Barclay Tower</div>')[0];
+                popup_3153b8d41da243a6a501a6d79e303b3d.setContent(html_d9ad87598f5b4199b99f32d1f37643b9);
+            
+
+            marker_8e50ce3917c44837a2752419cd984f69.bindPopup(popup_3153b8d41da243a6a501a6d79e303b3d);
+
+            
+        
+    
+            var heat_map_2b9d153c09264a9ab5fdf15841c7a455 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_70455b30e2d84c68a3d1d557c335932d = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_5fcd2da7e79e40a9875b41f4762669e2 = L.marker(
+                [40.7325893740559,-73.99567168115415],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_fc870274c4224d03af24b74729f3f241 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_5fcd2da7e79e40a9875b41f4762669e2.setIcon(icon_fc870274c4224d03af24b74729f3f241);
+            
+    
+            var popup_298d1dc9c7c740099791778de0cf09b6 = L.popup({maxWidth: '300'});
+
+            
+                var html_0caf85914d4049288b1dd4a0e031be85 = $('<div id="html_0caf85914d4049288b1dd4a0e031be85" style="width: 100.0%; height: 100.0%;">Brevoort Gym</div>')[0];
+                popup_298d1dc9c7c740099791778de0cf09b6.setContent(html_0caf85914d4049288b1dd4a0e031be85);
+            
+
+            marker_5fcd2da7e79e40a9875b41f4762669e2.bindPopup(popup_298d1dc9c7c740099791778de0cf09b6);
+
+            
+        
+    
+            var heat_map_71b4d2618ff545c0ab37406e91ad7fb4 = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_13fed08fd7c1430480ea75bbf81725c8 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+
+            var marker_b29a09df6ed94d5b832a48663f1a341e = L.marker(
+                [40.743468986181725,-73.99420536372824],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+            
+    
+
+                var icon_e6cf2a902f4d41669e5f4ab41dc48504 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_b29a09df6ed94d5b832a48663f1a341e.setIcon(icon_e6cf2a902f4d41669e5f4ab41dc48504);
+            
+    
+            var popup_01f1b6850f694fa0adb5da8b42962cbc = L.popup({maxWidth: '300'});
+
+            
+                var html_f61280a363b94aa48c217b96f5022442 = $('<div id="html_f61280a363b94aa48c217b96f5022442" style="width: 100.0%; height: 100.0%;">Peloton</div>')[0];
+                popup_01f1b6850f694fa0adb5da8b42962cbc.setContent(html_f61280a363b94aa48c217b96f5022442);
+            
+
+            marker_b29a09df6ed94d5b832a48663f1a341e.bindPopup(popup_01f1b6850f694fa0adb5da8b42962cbc);
+
+            
+        
+    
+            var heat_map_4678899daee549c1a91ccd213fc4e5aa = L.heatLayer(
+                [[40.742593, -74.000588], [40.75810868499696, -73.9917226956553], [40.74756385176932, -73.99583810530017], [40.74899270407195, -74.00525681858359], [40.74585894426403, -73.98823633435742], [40.74809912152061, -74.00343461289998], [40.74822371538265, -73.97024191430063], [40.74467102227094, -73.98872764725327], [40.742341, -73.991473], [40.74318583428775, -73.99431158852991], [40.742846422479744, -73.99012221307656], [40.75830294905915, -73.9922776051261], [40.738631, -73.985854], [40.7554661743803, -73.99534070848941], [40.74172460307028, -73.99470532021245], [40.74712961598228, -73.98998555273887], [40.74546240496286, -73.99093956093942], [40.7493516228633, -74.0058570045859], [40.743251486492184, -73.95974617103303], [40.705125057929344, -74.00781159711502], [40.733085847401185, -73.98702899795815], [40.751910352973866, -73.9858935506665], [40.74086544126383, -74.00816364540064], [40.71065538319971, -74.00570922556336], [40.741558, -73.999079], [40.72066955247745, -74.00828507585904], [40.75727530635666, -73.99779701418834], [40.71236, -74.009429], [40.7325893740559, -73.99567168115415], [40.743468986181725, -73.99420536372824]],
+                {
+                    minOpacity: 0.5,
+                    maxZoom: 25,
+                    max: 1.0,
+                    radius: 25,
+                    blur: 15,
+                    gradient: null
+                    })
+                .addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+    
+            var tile_layer_892ec8ad013d4733bcc464c3e4ed3b96 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+  "attribution": null,
+  "detectRetina": false,
+  "maxZoom": 18,
+  "minZoom": 1,
+  "noWrap": false,
+  "subdomains": "abc"
+}
+                ).addTo(feature_group_7db80216b0c6412891c7b718895f4d36);
+        
+</script>
